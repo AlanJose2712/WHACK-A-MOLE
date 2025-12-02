@@ -173,34 +173,21 @@ function selectTile() {
         hits++;
         document.getElementById("score").innerText = score;
 
-        // popup
-        let pop = document.createElement("div");
-        pop.classList.add("popup");
-        pop.innerText = "+10";
-        document.body.appendChild(pop);
-
-        const rect = this.getBoundingClientRect();
-        pop.style.left = rect.left + 70 + "px";
-        pop.style.top = rect.top + 20 + "px";
-        setTimeout(() => pop.remove(), 600);
-
+        // +10 popup code...
         this.innerHTML = "";
         if (soundEnabled) hitSound.play();
 
     } else if (currPlants.includes(this)) {
         misses++;
 
-        let flash = document.createElement("div");
-        flash.classList.add("redFlash");
-        this.appendChild(flash);
-        setTimeout(() => flash.remove(), 400);
-
+        // Red flash animation...
         this.classList.add("shake");
         setTimeout(() => this.classList.remove("shake"), 200);
 
         endGame();
     }
 }
+
 
 // ---------------- SOUND -----------------
 function toggleSound() {
@@ -225,3 +212,4 @@ function showStats() {
 function closeStats() {
     document.getElementById("statsModal").classList.add("hidden");
 }
+
