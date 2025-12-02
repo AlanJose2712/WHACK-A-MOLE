@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whac a Mole</title>
+  <link rel="stylesheet" href="mole.css" />
+  <script defer src="mole.js"></script>
+</head>
+<body>
+  <h1>Whac a Mole</h1>
+
+  <div class="info-box">
+    <h2>Score: <span id="score">0</span></h2>
+    <h2>Time: <span id="time">30</span></h2>
+    <h2>High Score: <span id="highScore">0</span></h2>
+  </div>
+
+  <div class="controls">
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <button id="startBtn" onclick="startGame()">Start Game</button>
+    <button id="restartBtn" onclick="restart()" style="display:none;">Restart</button>
+    <button id="soundBtn" onclick="toggleSound()">Sound: ON</button>
+  </div>
+
+  <div id="board"></div>
+
+  <!-- Stats Modal -->
+  <div id="statsModal" class="hidden">
+    <h2>Game Stats</h2>
+    <p>Total Hits: <span id="totalHits">0</span></p>
+    <p>Total Misses: <span id="totalMisses">0</span></p>
+    <p>Accuracy: <span id="accuracy">0</span>%</p>
+    <button onclick="closeStats()">Close</button>
+  </div>
+</body>
+</html>
