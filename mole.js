@@ -17,7 +17,7 @@ let bgMusic = new Audio("./music/background.mp3");
 bgMusic.loop = true;
 bgMusic.volume = 0.4;
 
-let hitSound = new Audio("./hit.wav");
+let hitSound = new Audio("./music/hit.wav");
 let overSound = new Audio("./music/gameover.wav");
 
 let soundEnabled = true;
@@ -212,5 +212,6 @@ function showStats() {
 function closeStats() {
     document.getElementById("statsModal").classList.add("hidden");
 }
+
 
 
