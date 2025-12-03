@@ -18,7 +18,7 @@ bgMusic.loop = true;
 bgMusic.volume = 0.4;
 
 let hitSound = new Audio("./hit.wav");
-let overSound = new Audio("./gameover.wav");
+let overSound = new Audio("./music/gameover.wav");
 
 let soundEnabled = true;
 
@@ -212,4 +212,5 @@ function showStats() {
 function closeStats() {
     document.getElementById("statsModal").classList.add("hidden");
 }
+
 
